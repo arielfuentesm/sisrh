@@ -1,43 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/869dc8f5ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>CONSISA</title>
+    <link rel="icon" href="/img/icono1.jpeg" type="image/png">
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <h1>Crea tu Cuenta</h1>
+          <div class="social-container">
+            <a href="#" class="social>">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social>">
+              <i class="fab fa-google" id="red"></i>
+            </a>
+            <a href="#" class="social>">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <span>o usa tu email como registro</span>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+            <input type="text" placeholder="Usuario" />
+            <input type="text" placeholder="Nombre Completo" />
+            <input type="email" placeholder="Email" />
+            <input id="password"  type="password"  placeholder="Contraseña" />
+            <input id="confirmPassword" type="password" placeholder="Confirmar Contraseña" />
+           
+           
+          <button id="lila">Registrar</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h1>Iniciar Sesión</h1>
+          <div class="social-container">
+            <a href="#" class="social">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social>">
+              <i class="fab fa-google" id="red"></i>
+            </a>
+            <a href="#" class="social">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <span>o usa tu email</span>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <a href="#">Olvidaste tu contraseña?</a>
+          <button>Iniciar sesión</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          
+          <div class="overlay-panel overlay-left">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+
+            <img src="/img/Logo1.png"  width="400px" alt="450px" class="Logo">
+        
+            
+            <h1 id="Bienvenido">¡Bienvenido!</h1>
+            <p id="Inicia">
+              Inicia sesión con tu cuenta
+            </p>
+            <button class="ghost" id="signIn">Inicia sesión</button>
+          </div>
+
+          <div class="overlay-panel overlay-right">
+            <img src="/img/Logo1.png"  width="400px" alt="450px" class="Logo">
+            <h1>Hola!!!</h1>
+            <p>Crear tu cuenta</p>
+            <button class="ghost" id="signUp">Registrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
