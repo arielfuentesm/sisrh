@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './login.css';
 
 const Login = () => {
   const containerRef = useRef(null);
+  const [isSignUp, setIsSignUp] = useState(false);
 
   useEffect(() => {
     const signUpButton = containerRef.current.querySelector('#signUp');
@@ -10,15 +11,17 @@ const Login = () => {
 
     signUpButton.addEventListener('click', () => {
       containerRef.current.classList.add('right-panel-active');
+      setIsSignUp(true);
     });
 
     signInButton.addEventListener('click', () => {
       containerRef.current.classList.remove('right-panel-active');
+      setIsSignUp(false);
     });
   }, []);
 
   return (
-    <div className="container" id="container" ref={containerRef}>
+    <div className={`container ${isSignUp ? 'right-panel-active' : ''}`} id="container" ref={containerRef}>
       <div className="form-container sign-in-container">
         <form action="#">
           <h1>Iniciar Sesión</h1>
@@ -27,6 +30,19 @@ const Login = () => {
           <input type="password" placeholder="Contraseña" />
           <a href="#">Olvidaste tu contraseña?</a>
           <button>Iniciar sesión</button>
+        </form>
+      </div>
+      <div className="form-container sign-up-container">
+        <form action="#">
+          <h1>{isSignUp ? 'Registrar' : 'Crear tu cuenta'}</h1>
+          <div className="social-container">
+            {/* Social icons go here */}
+          </div>
+          <span>o usa tu email como registro</span>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button id="lila">Registrar</button>
         </form>
       </div>
       <div className="overlay-container">
@@ -48,6 +64,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
