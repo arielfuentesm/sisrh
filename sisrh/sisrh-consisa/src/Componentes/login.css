@@ -200,7 +200,7 @@ button.ghost {
 }
 
 /* Bring sign up over sign in */
-.container.container.right-panel-active .sign-up-container {
+.container.right-panel-active .sign-up-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
@@ -222,8 +222,7 @@ button.ghost {
 .Logo{
   position: absolute ;
   top: 50px;
-  left: -
-   1px;
+  left: -1px;
 }
 
 #Bienvenido{
@@ -234,14 +233,10 @@ button.ghost {
   font-size: 16px;
 }
 
-
 body{
- 
-
   margin: 0;
   padding: 0;
   /* Establece la imagen de fondo */
- 
   /* Ajusta la imagen de fondo para que cubra toda la pantalla */
   background-size: cover;
   /* Centra la imagen de fondo */
@@ -249,4 +244,3 @@ body{
   /* Fija la imagen de fondo para que no se desplace con el contenido */
   background-attachment: fixed;
 }
-

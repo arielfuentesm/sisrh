@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import './login.css';
+
 const Login = () => {
   const containerRef = useRef(null);
 
@@ -18,12 +19,16 @@ const Login = () => {
 
   return (
     <div className="container" id="container" ref={containerRef}>
-      <h1>Iniciar Sesión</h1>
-      <span>o usa tu email</span>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Contraseña" />
-      <a href="#">Olvidaste tu contraseña?</a>
-      <button>Iniciar sesión</button>
+      <div className="form-container sign-in-container">
+        <form action="#">
+          <h1>Iniciar Sesión</h1>
+          <span>o usa tu email</span>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Contraseña" />
+          <a href="#">Olvidaste tu contraseña?</a>
+          <button>Iniciar sesión</button>
+        </form>
+      </div>
       <div className="overlay-container">
         <div className="overlay">
           <div className="overlay-panel overlay-left">
