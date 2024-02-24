@@ -241,7 +241,7 @@ body{
   margin: 0;
   padding: 0;
   /* Establece la imagen de fondo */
-  background-image: url('/img/Fondo1.jpg');
+ 
   /* Ajusta la imagen de fondo para que cubra toda la pantalla */
   background-size: cover;
   /* Centra la imagen de fondo */
