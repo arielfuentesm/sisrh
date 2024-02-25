@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './login.css';
 
 const Login = () => {
@@ -29,7 +30,10 @@ const Login = () => {
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Contraseña" />
           <a href="#">Olvidaste tu contraseña?</a>
-          <button>Iniciar sesión</button>
+          <Button /*Redirigiendome hacia el incio*/
+            buttonStyle='btn--outline' onClick={() => loginWithRedirect()}  >
+            <Link to='/inicio'>Iniciar sesión</Link>
+          </Button>
         </form>
       </div>
       <div className="form-container sign-up-container">
